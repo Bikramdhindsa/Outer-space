@@ -3,14 +3,15 @@ import React, { useEffect, useState } from 'react'
 import './css/pictureOfDay.scss'
 
 export default function PictureOfDay() {
-    const DEMO_KEY = "K0ykv0u7b7ooHi5KZgsLNzTdCiqZVc12JF7oP1Lv";
+
+    const API_KEY = import.meta.env.VITE_DEMO_KEY ;
     
     const [pictureData, setPictureData] = useState();
     const [customDate, setCustomDate] = useState(null);
 
     useEffect(() => {
         const onContentLoaded = async () => {
-            const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${DEMO_KEY}`, {
+            const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
