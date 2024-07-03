@@ -1,0 +1,63 @@
+.header {
+    height: 100px;
+    background-color: black; 
+    .wrapper {
+        max-width: 1336px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 20px;
+
+        span {
+            font-weight: bold;
+            font-size: 24px;
+            color: white;
+        }
+
+        .logos {
+            display: flex;
+            gap: 20px;
+            align-items: center; 
+            
+            .logo-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px; 
+                
+                .logo {
+                    height: 100%; 
+                    width: auto;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    &.spacex-logo {
+                        width: auto; 
+                        max-width: 100px; 
+                    }
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+
+.icon {
+    color: white;
+    width: 18px;
+    height: 18px;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: lightgrey;
+    }
+}
